@@ -12,6 +12,11 @@ class Test_Home(BaseTest):
         self.homescreen=HomePage(self.driver)
         title1=self.homescreen.get_homepage_title()
         assert title1=="Fantastic Furniture | Best Value Furniture, Mattresses & Decor | Shop Online"
+
+    def test_url(self):
+        self.homescreen=HomePage(self.driver)
+        current_url=self.homescreen.geturl()
+        assert current_url=="https://www.fantasticfurniture.com.au/"
         
         
 

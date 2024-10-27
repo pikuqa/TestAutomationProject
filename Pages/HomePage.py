@@ -17,5 +17,8 @@ class HomePage(BasePage):
 
     def get_homepage_title(self):
         return self.get_title()    
+    
+    def geturl(self):
+        return self.driver.current_url
 
     

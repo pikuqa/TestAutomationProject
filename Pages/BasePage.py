@@ -28,6 +28,6 @@ class BasePage:
     def is_enabled(self, locator):
         elem1=WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(locator))
         return bool(elem1)
-
+        
     def get_title(self):
         return self.driver.title    
