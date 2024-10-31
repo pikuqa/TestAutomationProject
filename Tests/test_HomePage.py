@@ -17,6 +17,10 @@ class Test_Home(BaseTest):
         self.homescreen=HomePage(self.driver)
         current_url=self.homescreen.geturl()
         assert current_url=="https://www.fantasticfurniture.com.au/"
+    
+    def test_is_searchbox_present(self):
+        self.homescreen=HomePage(self.driver)
+        assert self.homescreen.is_serachbox_present()
         
         
 
