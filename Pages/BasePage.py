@@ -8,6 +8,9 @@ class BasePage:
     def __init__(self, driver):
         self.driver=driver
 
+    def find_elems(self, locator):
+        return self.driver.find_elements(locator)
+
     def do_click(self, locator):
         WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(locator)).click()
 
@@ -31,3 +34,10 @@ class BasePage:
         
     def get_title(self):
         return self.driver.title    
+    
+    def mouse_hover_scroll(self, locator):
+        self.hover_element= WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(locator))
+        self.actions=ActionChains(self.driver)
+        return self.actions.move_to_element(self.hover_element).perform()
+    
+    
