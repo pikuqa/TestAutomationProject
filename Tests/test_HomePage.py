@@ -23,12 +23,12 @@ class Test_Home(BaseTest):
         self.homescreen=HomePage(self.driver)
         assert self.homescreen.is_serachbox_present()
 
-    # def test_successful_cartmessage(self):
-    #     self.homescreen=HomePage(self.driver)
-    #     self.homescreen.add_to_cart_jordan_single_bed()
-    #     Actual_message=self.homescreen.cart_message()
-    #     expected_message="Item was added to your cart"
-    #     assert Actual_message==expected_message, "this test case is not passed"
+    def test_successful_cartmessage(self):
+        self.homescreen=HomePage(self.driver)
+        self.homescreen.add_to_cart_jordan_single_bed()
+        Actual_message=self.homescreen.cart_message()
+        expected_message="Item was added to your cart"
+        assert Actual_message==expected_message, "this test case is not passed"
 
 
 
