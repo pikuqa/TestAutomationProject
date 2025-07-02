@@ -27,7 +27,7 @@ class Test_Home(BaseTest):
         self.homescreen=HomePage(self.driver)
         self.homescreen.add_to_cart_jordan_single_bed()
         Actual_message=self.homescreen.cart_message()
-        expected_message="Item was added to your cart 1"
+        expected_message="Item was added to your cart branch 2"
         assert Actual_message==expected_message, "this test case is not passed 310525"
 
 
